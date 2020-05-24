@@ -1,0 +1,11 @@
+# This is a TOML file.
+
+title = "TOML Example in a file"
+
+[dimension]
+L = 100
+H = 100
+
+[numerical-properties]
+n_x = 10
+n_y = 10
