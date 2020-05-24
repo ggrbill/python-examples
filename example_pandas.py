@@ -14,8 +14,8 @@ print(df.isnull().sum(), '\n\n')
 
 # Filling NAN ρL_g_cm3 values to be 0.0
 for series in ['ρL_g_cm3']:
-	bip_series = df[series]
-	bip_series.fillna(0.0, inplace = True)
+	rho_series = df[series]
+	rho_series.fillna(0.0, inplace = True)
 
 # Add new Column by condition
 condition = lambda x: 'pseudo-component' if 'Pseudo' in x else 'pure-component'
