@@ -1,15 +1,21 @@
 import numpy as np
-x = np.arange(0.0,5.0,1.0)
-y = np.arange(5.0,10.0,1.0)
-z = np.arange(10.0,15.0,1.0)
 
-filename = "./files/arrays_in_columns.csv"
-f = open(filename, "w")
+def export_to_csv(filename):
+	# Creating 3 vectors
+	XX = np.arange(0.0,5.0,1.0)
+	YY = np.arange(5.0,10.0,1.0)
+	ZZ = np.arange(10.0,15.0,1.0)
 
-f.write(f'a,b,c\n')
-for v in zip(x, y, z):
-	f.write(f'{v[0]},{v[1]},{v[2]}\n')
+	# Opening a new csv file
+	with open("./files/"+filename+".csv", "w") as f:
+		# Writing the vectors as columns 
+		f.write(f'x,y,z\n')
+		for x, y, z in zip(XX, YY, ZZ):
+			f.write(f'{x},{y},{z}\n')
 
-f.close()
+	# Final message
+	print(f'CSV File called \'{filename}\' saved.')
 
-print(f' File {filename} saved.')
+
+if __name__ == '__main__':
+    export_to_csv("arrays_in_columns")
