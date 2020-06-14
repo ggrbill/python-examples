@@ -11,7 +11,7 @@ $ conda activate PyExamples
 ```
 
 ## Running examples
-To run the Python examples execute enter in the folder `src` and execute the following commands: 
+To run the Python examples you must be in the `src` folder, for that execute the following commands:
 ```shell
 $ cd src
 $ python {example_filename}.py
