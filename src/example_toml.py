@@ -20,7 +20,7 @@ def load_and_print_toml():
     print(colored(parsed_toml, 'blue', attrs=['bold']))
 
     # Load toml from a File
-    parsed_toml = toml.load('./files/example_file.toml')
+    parsed_toml = toml.load('../input/example_file.toml')
     print(colored(parsed_toml, 'red', attrs=['bold']))
 
 

@@ -1,8 +1,9 @@
 import pandas as pd
 
 def main():
+	relative_path = '../input/'
 	# reading from a CSV file
-	df = pd.read_csv('./files/data.csv', index_col='Component')
+	df = pd.read_csv(relative_path + 'data.csv', index_col='Component')
 
 	# Adding a new Column called 'name'
 	names = ['Nitrogen','Carbon Dioxide','Methane','Ethane','Propane','Iso-Butane', 'Butane', 'Iso-Pentane', 'Pentane', 'Hexane', 'Pseudo-C-7-15', 'Pseudo-C-16-37', 'Pseudo-C-38-80']
@@ -33,7 +34,7 @@ def main():
 	print(df[df.MW > 100.0], '\n\n')
 
 	# Saving new CSV file (The enconding is used to save properly the unicode of 'rho')
-	df.to_csv('./files/new_data.csv', encoding='utf-8-sig')
+	df.to_csv(relative_path + 'new_data.csv', encoding='utf-8-sig')
 
 
 if __name__ == '__main__':

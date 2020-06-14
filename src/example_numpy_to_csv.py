@@ -7,7 +7,7 @@ def export_to_csv(filename):
 	ZZ = np.arange(10.0,15.0,1.0)
 
 	# Opening a new csv file
-	with open("./files/"+filename+".csv", "w") as f:
+	with open("../input/"+filename+".csv", "w") as f:
 		# Writing the vectors as columns 
 		f.write(f'x,y,z\n')
 		for x, y, z in zip(XX, YY, ZZ):
