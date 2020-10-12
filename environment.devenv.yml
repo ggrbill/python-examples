@@ -12,4 +12,5 @@ dependencies:
   - pip:
     - colorama==0.4.1
     - termcolor==1.1.0
+    - click==7.1.2
 
